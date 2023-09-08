@@ -7,6 +7,7 @@ import axios from "axios";
 import Navbar from "./components/Navbar";
 import Container from "./components/Container";
 import Empty from "./components/Empty";
+import Emojis from "./components/Emojis";
 
 function App() {
   const [emojisData, setEmojisData] = useState([]);
@@ -40,8 +41,9 @@ function App() {
         <h1>Hello World</h1>
 
         {loading && <Empty text="Loading..." />}
-        {error && <p>Error</p>}
-        {emojisData.length > 0 && <p>Emoji Data Berhasil</p>}
+        {error && <Empty text="Error" />}
+
+        {emojisData.length > 0 && <Emojis emojisData={emojisData} />}
       </Container>
     </>
   );
