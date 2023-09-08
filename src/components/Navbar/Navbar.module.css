@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background-color: #a2aab6;
+  padding: 0 16px;
+  height: 55px;
+}
+
+.navTitle {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
