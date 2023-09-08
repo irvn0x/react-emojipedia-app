@@ -38,8 +38,6 @@ function App() {
     <>
       <Navbar />
       <Container>
-        <h1>Hello World</h1>
-
         {loading && <Empty text="Loading..." />}
         {error && <Empty text="Error" />}
 
