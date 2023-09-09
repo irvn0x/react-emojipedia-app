@@ -1,6 +1,6 @@
 .emojiBox {
-  background-color: #b4bbc4;
-  box-shadow: #c7ccd3;
+  background-color: #c4cde0;
+  box-shadow: #9daccb;
   border-radius: 4px;
   padding: 8px;
   margin: 4px;
@@ -19,7 +19,7 @@
 
 .selected {
   transform: rotate(32deg) scale(1.4, 1.4);
-  box-shadow: #d0d4da;
+  box-shadow: #899bc1;
 }
 
 .emoji {
@@ -29,4 +29,5 @@
 .emojiText {
   font-size: 12px;
   font-weight: 600;
+  margin-top: 10px;
 }
