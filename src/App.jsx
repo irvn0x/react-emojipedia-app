@@ -8,8 +8,10 @@ import Navbar from "./components/Navbar";
 import Container from "./components/Container";
 import Empty from "./components/Empty";
 import Emojis from "./components/Emojis";
+import Input from "./components/Input";
 
 function App() {
+  const [searchText, setSearchText] = useState("");
   const [emojisData, setEmojisData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -34,14 +36,21 @@ function App() {
     fetchEmojis();
   }, []);
 
+  const handleSearchEmojis = (event) => {
+    setSearchText(event.target.value);
+  };
+
   return (
     <>
       <Navbar />
       <Container>
+        <Input onChange={handleSearchEmojis} value={searchText} />
         {loading && <Empty text="Loading..." />}
         {error && <Empty text="Error" />}
 
-        {emojisData.length > 0 && <Emojis emojisData={emojisData} />}
+        {emojisData.length > 0 && (
+          <Emojis emojisData={emojisData} searchText={searchText} />
+        )}
       </Container>
     </>
   );
